@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<title>W3.CSS Template</title>
+<title>Webtech</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -45,38 +45,40 @@ body {font-size:16px;}
   
   <div class="w3-row-padding">
     <div class="w3-half">
-      <img src="band.png" style="width:100%" onclick="onClick(this)" alt="Band Template">
-      <img src="food.png" style="width:100%" onclick="onClick(this)" alt="Food Blog Template">
-      <img src="photo.png" style="width:100%" onclick="onClick(this)" alt="Photo Template">
-	  <img src="cloth.png" style="width:100%" onclick="onClick(this)" alt="Cloth Template">
-	  <img src="soon.png" style="width:100%" onclick="onClick(this)" alt="Coming Soon Template">
-	  <img src="wedding.png" style="width:100%" onclick="onClick(this)" alt="Wedding Invitation Template">
-	  <img src="black.png" style="width:100%" onclick="onClick(this)" alt="Black and White Template">
-	  <img src="potfolio.png" style="width:100%" onclick="onClick(this)" alt="Portfolio Template">
-	  <img src="nature.png" style="width:100%" onclick="onClick(this)" alt="Nature Template">
-	  <img src="people.png" style="width:100%" onclick="onClick(this)" alt="People Template">
+      <img src="band.png" id="1" style="width:100%" onclick="onClick(this)" alt="Band Template">
+      <img src="food.png" id="2" style="width:100%" onclick="onClick(this)" alt="Food Blog Template">
+      <img src="photo.png" id="3" style="width:100%" onclick="onClick(this)" alt="Photo Template">
+	  <img src="cloth.png" id="4" style="width:100%" onclick="onClick(this)" alt="Cloth Template">
+	  <img src="soon.png" id="5" style="width:100%" onclick="onClick(this)" alt="Coming Soon Template">
+	  <img src="wedding.png" id="6" style="width:100%" onclick="onClick(this)" alt="Wedding Invitation Template">
+	  <img src="black.png" id="7" style="width:100%" onclick="onClick(this)" alt="Black and White Template">
+	  <img src="potfolio.png" id="8" style="width:100%" onclick="onClick(this)" alt="Portfolio Template">
+	  <img src="nature.png" id="9" style="width:100%" onclick="onClick(this)" alt="Nature Template">
+	  <img src="people.png" id="10" style="width:100%" onclick="onClick(this)" alt="People Template">
     </div>
 
     <div class="w3-half">
-      <img src="blog.png" style="width:100%" onclick="onClick(this)" alt="Blog Template">
-      <img src="cv.png" style="width:100%" onclick="onClick(this)" alt="CV Template">
-      <img src="man.png" style="width:100%" onclick="onClick(this)" alt="Candid Template">
-	  <img src="john.png" style="width:100%" onclick="onClick(this)" alt="Dark Portfolio Template">
-	  <img src="rest.png" style="width:100%" onclick="onClick(this)" alt="Rest Template">
-	  <img src="start.png" style="width:100%" onclick="onClick(this)" alt="Startup Template">
-	  <img src="app.png" style="width:100%" onclick="onClick(this)" alt="App Launch Template">
-	  <img src="market.png" style="width:100%" onclick="onClick(this)" alt="Marketing Template">
-	  <img src="art.png" style="width:100%" onclick="onClick(this)" alt="Art Galary Template">
-	  <img src="social.png" style="width:100%" onclick="onClick(this)" alt="Social Media Template">
+      <img src="blog.png" id="11" style="width:100%" onclick="onClick(this)" alt="Blog Template">
+      <img src="cv.png" id="12" style="width:100%" onclick="onClick(this)" alt="CV Template">
+      <img src="man.png" id="13" style="width:100%" onclick="onClick(this)" alt="Candid Template">
+	  <img src="john.png" id="14" style="width:100%" onclick="onClick(this)" alt="Dark Portfolio Template">
+	  <img src="rest.png" id="15" style="width:100%" onclick="onClick(this)" alt="Rest Template">
+	  <img src="start.png" id="16" style="width:100%" onclick="onClick(this)" alt="Startup Template">
+	  <img src="app.png" id="17" style="width:100%" onclick="onClick(this)" alt="App Launch Template">
+	  <img src="market.png" id="18" style="width:100%" onclick="onClick(this)" alt="Marketing Template">
+	  <img src="art.png" id="19" style="width:100%" onclick="onClick(this)" alt="Art Galary Template">
+	  <img src="social.png" id="20" style="width:100%" onclick="onClick(this)" alt="Social Media Template">
     </div>
   </div>
 
-  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
-    <span class="w3-button w3-black w3-xxlarge w3-display-topright">X</span>
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0">
+    <span class="w3-button w3-black w3-xxlarge w3-display-topright" onclick="this.style.display='none';location.reload();">X</span>
     <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-      <img id="img01" class="w3-image">
+      <img id="img01" class="w3-image modI">
       <p id="caption"></p>
-    </div>
+	  <button class="w3-button" onclick="modall(document.getElementsByClassName('modI')[0].id)">Explore</button>
+      <button class="w3-button" onclick="pay(document.getElementsByClassName('modI')[0].id)">Buy Now</button>
+	</div>
   </div>
 
   <div class="w3-container" id="services" style="margin-top:75px">
@@ -170,8 +172,8 @@ body {font-size:16px;}
     <h1 class="w3-xxxlarge w3-text-red"><b>Contact.</b></h1>
     <hr style="width:50px;border:5px solid red" class="w3-round">
     <p>Do you want us to style your website? Fill out the form and fill us in with the details :) We love meeting new people!</p>
-    <form action="https://formspree.io/samparkamaity65@gmail.com" method="POST">
-      <div class="w3-section">+
+    <form action="//formspree.io/samparkamaity65@gmail.com" method="POST">
+      <div class="w3-section">
         <label>Name</label>
         <input class="w3-input w3-border" type="text" name="Name" required>
       </div>
@@ -204,9 +206,111 @@ function w3_close() {
 function onClick(element) {
   document.getElementById("img01").src = element.src;
   document.getElementById("modal01").style.display = "block";
+  document.getElementById("img01").id = element.id;
   var captionText = document.getElementById("caption");
   captionText.innerHTML = element.alt;
  }
+ 
+ function modall(idd) {
+console.log(idd);
+document.getElementById('modal01').display = 'none';
+if(idd==1)
+{
+window.location.href = "https://www.w3schools.com/w3css/tryw3css_templates_band.htm";
+}
+if(idd==2)
+{
+window.location.href ="https://www.w3schools.com/w3css/tryw3css_templates_gourmet_catering.htm";
+}
+if(idd==3)
+{
+window.location.href ="https://www.w3schools.com/w3css/tryw3css_templates_photo.htm";
+}
+if(idd==4)
+{
+window.location.href ="https://www.w3schools.com/w3css/tryw3css_templates_clothing_store.htm";
+}
+if(idd==5)
+{
+window.location.href ="https://www.w3schools.com/w3css/tryw3css_templates_coming_soon.htm";
+}
+if(idd==6)
+{
+window.location.href ="https://www.w3schools.com/w3css/tryw3css_templates_wedding.htm";
+}
+if(idd==7)
+{
+window.location.href ="https://www.w3schools.com/w3css/tryw3css_templates_photo2.htm";
+}
+if(idd==8)
+{
+window.location.href ="https://www.w3schools.com/w3css/tryw3css_templates_photo3.htm";
+}
+if(idd==9)
+{
+window.location.href ="https://www.w3schools.com/w3css/tryw3css_templates_portfolio.htm";
+}
+if(idd==10)
+{
+window.location.href ="https://www.w3schools.com/w3css/tryw3css_templates_portfolio2.htm";
+}
+if(idd==11)
+{
+window.location.href ="https://www.w3schools.com/w3css/tryw3css_templates_blog.htm";
+}
+if(idd==12)
+{
+window.location.href ="https://www.w3schools.com/w3css/tryw3css_templates_blog.htm";
+}
+if(idd==13)
+{
+window.location.href ="https://www.w3schools.com/w3css/tryw3css_templates_cv.htm";
+}
+if(idd==14)
+{
+window.location.href ="https://www.w3schools.com/w3css/tryw3css_templates_cv.htm";
+}
+if(idd==15)
+{
+window.location.href="https://www.w3schools.com/w3css/tryw3css_templates_clothing_store.htm";
+}
+if(idd==16)
+{
+window.location.href="https://www.w3schools.com/w3css/tryw3css_templates_dark_portfolio.htm";
+}
+if(idd==17)
+{
+window.location.href="https://www.w3schools.com/w3css/tryw3css_templates_restaurant_modal.htm";
+}
+if(idd==18)
+{
+window.location.href="https://www.w3schools.com/w3css/tryw3css_templates_restaurant_modal.htm";
+}
+if(idd==19)
+{
+window.location.href="https://www.w3schools.com/w3css/tryw3css_templates_streetart.htm";
+}
+if(idd==20)
+{
+window.location.href="https://www.w3schools.com/w3css/tryw3css_templates_social.htm";
+}
+}
+function pay(i) {
+if(i==1){
+window.location.href="https://imjo.in/ec93ru";
+}
+if(i==2){
+window.location.href="https://imjo.in/2HTrtK";
+}
+if(i==11)
+{
+window.location.href="https://imjo.in/Vq2gTV";
+}
+if(i==12)
+{
+window.location.href="https://imjo.in/DHSpPT";
+}
+}
 </script>
 
 </body>
